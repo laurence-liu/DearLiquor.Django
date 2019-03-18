@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dear Alcohol</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <div class="member">
+        {% if user.is_authenticated %}
+        <p class="memberName">Hi {{ user.username }}!</p>
+        <p class="memberFunction"><a href="{% url 'logout' %}">logout</a></p>
+        <p class="memberFunction"><a href="{% url 'password_reset' %}">reset password</a></p>
+        {% else %}
+        <p class="memberName">You are not logged in</p>
+        <p class="memberFunction"><a href="{% url 'login' %}">login</p>
+        {% endif %}
+    </div>
+
+    <!-- FORM SEARCH -->
+    <div class="form">
+        <form>
+            <label for="form-search"></label>
+            <input type="text" id="form-search" placeholder="What do you want to drink?">
+        </form>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <!-- <input type="submit" value="Google Search" id="google_search">
+        <input type="submit" value="I'm Feeling Lucky" id="im_feeling_lucky">
+        <input onclick="location.href='http://localhost:8000/baseliquor/'" type="button" value="Base Liquor"
+            id="base_liquor"> -->
+        <div class="grid-container">
+            <div class="grid-item">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">Base Liquor</p>
+            </div>
+            <div class="grid-item">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">Liqueur</p>
+            </div>
+            <div class="grid-item">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">Whisky Cocktail</p>
+            </div>
+            <div class="grid-item">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">Vodka Cocktail</p>
+            </div>
+            <div class="grid-item">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">Gin Cocktail</p>
+            </div>
+            <div class="grid-item">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">Rum Cocktail</p>
+            </div>
+            <div class="grid-item">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">Tequila Cocktail</p>
+            </div>
+            <div class="grid-item">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">Brandy Cocktail</p>
+            </div>
+            <div class="grid-item">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">Special Cocktail</p>
+            </div>
+            <div class="grid-item">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">About</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- <ul class="footer-left">
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+        <ul class="footer-right">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul> -->
+    </footer>
+</body>
+
+</html>
