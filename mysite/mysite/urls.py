@@ -19,6 +19,7 @@ from django.views.generic.base import TemplateView
 
 from baseliquor.views import baseliquor, whisky
 from cocktails.views import cocktail
+from store.views import store
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,6 @@ urlpatterns = [
     path('baseliquor/', baseliquor),
     path('baseliquor/whisky/', whisky),
     path('cocktails/', cocktail),
+    path('store/', store),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
 ]

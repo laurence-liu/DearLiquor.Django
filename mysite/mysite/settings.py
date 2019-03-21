@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'baseliquor', 
     'cocktails', 
+    'store',
     'django_extensions',
 ]
 
