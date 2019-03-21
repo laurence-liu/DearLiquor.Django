@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cocktails</title>
+    <link rel="stylesheet" href="{% static 'css/cocktails.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <img src="{% static 'img/ic_home.png' %}" alt="" height="50" width="50" onclick="location.href='/'"
+            style="cursor: pointer;">
+        <h1 class="site-title text-center">
+            COCKTAILS
+        </h1>
+    </div>
+
+    <div class="container">
+        <div class="form">
+            <form autocomplete="off">
+                <div class="autocomplete">
+                    <input id="myInput" type="text" placeholder="Search Cocktails">
+                </div>
+            </form>
+        </div>
+
+        {% for cocktail in cocktails %}
+        <div class="post-wrapper">
+            <div class="post">
+                <div class="post-heading">
+                    <h2 class="title">
+                        <a href="#">{{ cocktail.name }}</a>
+                    </h2>
+                </div>
+                {% if cocktail.pic %}
+                <div class="thumbnail">
+                    <img src="{{ cocktail.pic }}" alt="">
+                </div>
+                {% else %}
+                <div class="thumbnail thumbnail-default"></div>
+                {% endif %}
+
+                <div class="post-footer">
+                    <a class="read-more" href="{{ cocktail.link }}">
+                        Get Recipe
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script src="{% static 'js/cocktails.js' %}">
+    </script>
+</body>
+
+</html>

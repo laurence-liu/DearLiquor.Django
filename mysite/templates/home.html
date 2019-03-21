@@ -21,12 +21,12 @@
     </div>
 
     <!-- FORM SEARCH -->
-    <div class="form">
+    <!-- <div class="form">
         <form>
             <label for="form-search"></label>
             <input type="text" id="form-search" placeholder="What do you want to drink?">
         </form>
-    </div>
+    </div> -->
 
     <!-- BUTTONS -->
     <div class="buttons">
@@ -35,19 +35,23 @@
         <input onclick="location.href='http://localhost:8000/baseliquor/'" type="button" value="Base Liquor"
             id="base_liquor"> -->
         <div class="grid-container">
-            <div class="grid-item">
+            <div class="grid-item" onclick="location.href='http://localhost:8000/baseliquor/'">
                 <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
                 <p class="item-title">Base Liquor</p>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="location.href='http://localhost:8000/cocktails/'">
                 <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
-                <p class="item-title">Liqueur</p>
+                <p class="item-title">Find Cocktails</p>
+            </div>
+            <div class="grid-item" onclick="location.href='http://localhost:8000/cocktails/'">
+                <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
+                <p class="item-title">Store </p>
             </div>
             <div class="grid-item">
                 <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
-                <p class="item-title">Whisky Cocktail</p>
+                <p class="item-title">About</p>
             </div>
-            <div class="grid-item">
+            <!-- <div class="grid-item">
                 <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
                 <p class="item-title">Vodka Cocktail</p>
             </div>
@@ -74,24 +78,9 @@
             <div class="grid-item">
                 <img class="item-img" src="{% static 'img/ic_base_liquor.png' %}">
                 <p class="item-title">About</p>
-            </div>
+            </div> -->
         </div>
     </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <!-- <ul class="footer-left">
-            <li><a href="#">Advertising</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-
-        <ul class="footer-right">
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul> -->
-    </footer>
 </body>
 
 </html>
