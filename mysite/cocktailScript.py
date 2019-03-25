@@ -8,8 +8,10 @@ c = conn.cursor()
 with open('cocktails.json') as f:
     cocktails = json.load(f)
 
-for i in range(len(cocktails)):
-    c.execute("insert into cocktails_cocktail values (?, ?, ?, ?)", [i + 1, cocktails[i]['title'], cocktails[i]['pic'], cocktails[i]['link']])
+for index, cocktails in enumerate(cocktails, 1):
+    c.execute("insert into cocktails_cocktail values (?, ?, ?, ?)", 
+              [index, cocktails['title'], cocktails['pic'], cocktails['link']])
     conn.commit()
 
 conn.close()
+

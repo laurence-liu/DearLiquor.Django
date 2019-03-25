@@ -55,17 +55,6 @@ li.nav-links a:hover {
     color: #fff;
 }
 
-/* GOOGLE AREA */
-
-.google #google_logo {
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    clear: both;
-    padding-top: 100px;
-    padding-bottom: 20px;
-}
-
 .form {
     text-align: center;
 }
@@ -98,6 +87,8 @@ li.nav-links a:hover {
 
 .memberName {
     color: #ffffff;
+    font-size: 18px;
+    margin-top: 25px;
 }
 
 .memberFunction {
@@ -108,38 +99,6 @@ li.nav-links a:hover {
 .memberFunction:hover {
     transform: scale(1.3);
 }
-
-
-/* FOOTER */
-/* 
-footer {
-    background: #f2f2f2;
-    border-top: solid 2px #e4e4e4;
-    position: fixed;
-    bottom: 0;
-    padding-bottom: 0;
-    width: 100%;
-}
-
-footer ul li {
-    display: inline;
-    color: #666666;
-    font-size: 14px;
-    padding: 13px;
-}
-
-footer ul {
-    float: left;
-    padding: 1px;
-}
-
-footer ul a:hover {
-    text-decoration: underline;
-}
-
-.footer-right {
-    float: right;
-} */
 
 /* MEDIA QUERIES */
 
@@ -210,42 +169,140 @@ footer ul a:hover {
     }
 }
 
-.grid-container {
-    width:40%;
-    margin: auto;
-    display: grid;
-    /* grid-template-columns: auto auto auto; */
-    /* background-color: #2196F3; */
-    /* padding: 10px; */
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(2, auto);
+.bg-gradient {
+    /* background: #C9D6FF;
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF); */
+    margin-top: 100px;
 }
 
-.grid-item {
-    /* background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8); */
-    /* padding: 20px; */
-    /* font-size: 10px; */
-    width: 130px;
-    height: 130px;
+/* ul li {
+    margin-bottom: 1.4rem;
+} */
+
+.pricing-divider {
+    border-radius: 20px;
+    background: #C64545;
+    padding: 1em 0 6em;
+    position: relative;
+}
+
+.blue .pricing-divider {
+    background: #2D5772;
+}
+
+.green .pricing-divider {
+    background: #00BFA5;
+}
+
+.red b {
+    color: #C64545
+}
+
+.blue b {
+    color: #2D5772
+}
+
+.green b {
+    color: #00BFA5
+}
+
+.pricing-divider-img {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.deco-layer {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.btn-custom {
+    background: #C64545;
+    color: #fff;
+    border-radius: 20px
+}
+
+.img-float {
+    width: 50px;
+    position: absolute;
+    top: -3.5rem;
+    right: 1rem
+}
+
+.princing-item {
+    transition: all 150ms ease-out;
+}
+
+.princing-item:hover {
+    transform: scale(1.05);
+}
+
+.princing-item:hover .deco-layer--1 {
+    -webkit-transform: translate3d(15px, 0, 0);
+    transform: translate3d(15px, 0, 0);
+}
+
+.princing-item:hover .deco-layer--2 {
+    -webkit-transform: translate3d(-15px, 0, 0);
+    transform: translate3d(-15px, 0, 0);
+}
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+body {
+    /* background-color: #ff666f; */
+    background-color: #000000;
+}
+
+a {
+    color: #fff !important;
+}
+
+.nav-item {
+    font-family: Century Gothic;
+    margin: 0 auto;
+    padding: 1em 3em;
     text-align: center;
-    transition: background 0.2s;
-    border-radius: 5px;
 }
 
-.grid-item:hover {
-    background-color: #999;
-    border-radius: 5px;
-    cursor: pointer;
+.nav-item a {
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Century Gothic;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
 }
 
-.item-img {
-    width: 65px;
-    height: 65px;
-    margin-top: 20px;
+/* Top & Bottom Borders Out */
+
+.topBotomBordersOut a:before, .topBotomBordersOut a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-.item-title {
-    font-size: 12px;
-    color: white;
+.topBotomBordersOut a:before {
+    top: 0px;
+    transform: translateY(10px);
+}
+
+.topBotomBordersOut a:after {
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+.topBotomBordersOut a:hover:before, .topBotomBordersOut a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
 }

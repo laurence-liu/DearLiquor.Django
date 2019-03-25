@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
 
-from baseliquor.views import baseliquor, whisky
+from baseliquor.views import baseliquor
 from cocktails.views import cocktail
 from store.views import store
 
@@ -26,7 +26,7 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('baseliquor/', baseliquor),
-    path('baseliquor/whisky/', whisky),
+    # path('liquor_detail/(?P<pk>\d+)/$', liquor_detail, name='liquor_detail'),
     path('cocktails/', cocktail),
     path('store/', store),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),

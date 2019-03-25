@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class BaseLiquor(models.Model):
-    title = models.CharField(max_length=100)
-    content = models.TextField(blank=True)
-    photo = models.URLField(blank=True)
-    location = models.CharField(max_length=100)
-    created_at = models.DateTimeField(auto_now_add=True)
+    name = models.CharField(max_length=100)
+    pic = models.URLField(blank=True)
+    origin = models.CharField(max_length=100)
+    material = models.CharField(max_length=100)
+    description = models.TextField(blank=True)

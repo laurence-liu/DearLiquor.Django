@@ -10,7 +10,8 @@
 
 <body>
     <div class="header">
-        <img src="{% static 'img/ic_home.png' %}" alt="" height="50" width="50" onclick="location.href='/'" style="cursor: pointer;">
+        <img src="{% static 'img/ic_home.png' %}" alt="" height="50" width="50" onclick="location.href='/'"
+            style="cursor: pointer;">
         <h1 class="site-title text-center">
             BASE LIQUOR
         </h1>
@@ -22,21 +23,23 @@
             <div class="post">
                 <div class="post-heading">
                     <h2 class="title">
-                        <a href="#">{{ baseliquor.title }}</a>
+                        <a href="#">{{ baseliquor.name }}</a>
                     </h2>
                 </div>
-                {% if baseliquor.photo %}
+                {% if baseliquor.pic %}
                 <div class="thumbnail">
-                    <img src="{{ baseliquor.photo }}" alt="">
+                    <img src="{{ baseliquor.pic }}" alt="">
                 </div>
                 {% else %}
                 <div class="thumbnail thumbnail-default"></div>
                 {% endif %}
                 <div class="post-content read-more-block">
-                    {{ baseliquor.content }}
+                    <p>Origin: {{ baseliquor.origin }}</p>
+                    <p>Material: {{ baseliquor.material }}</p>
+                    <p>Description: {{ baseliquor.description }}</p>
                 </div>
                 <div class="post-footer">
-                    <a class="read-more" href="#" onclick="location.href='http://localhost:8000/baseliquor/whisky'">
+                    <a class="read-more" href="#" onclick="location.href='https://en.wikipedia.org/wiki/{{baseliquor.name}}'">
                         Read More <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>

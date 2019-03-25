@@ -8,5 +8,8 @@ def baseliquor(request):
         'baseliquors': baseliquors,
     })
 
-def whisky(request):
-    return render(request, 'whisky.html', {})
+# def liquor_detail(request, pk):
+#     baseliquors = BaseLiquor.objects.get(pk=pk)
+#     return render(request, 'whisky.html', {
+#         'baseliquors': baseliquors,
+#     })

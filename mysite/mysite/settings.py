@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'baseliquor', 
     'cocktails', 
     'store',
-    'django_extensions',
 ]
 
 MIDDLEWARE = [

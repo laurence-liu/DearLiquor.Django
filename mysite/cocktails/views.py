@@ -7,3 +7,4 @@ def cocktail(request):
     return render(request, 'cocktail.html', {
         'cocktails': cocktails,
     })
+
