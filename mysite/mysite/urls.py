@@ -26,7 +26,6 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('baseliquor/', baseliquor),
-    # path('liquor_detail/(?P<pk>\d+)/$', liquor_detail, name='liquor_detail'),
     path('cocktails/', cocktail),
     path('store/', store),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
